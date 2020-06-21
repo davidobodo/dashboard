@@ -29,7 +29,9 @@ const GlobalStyles = createGlobalStyle`
 const theme = {
     lightBlue: '#f0f7fd',
     darkBlue: '#0075ff',
+    veryDarkBlue: '#131f3e',
     popularBoxMargin: '12px',
+    ashColor: '#e9eff4',
 };
 
 const AppWrapper = styled.div`
