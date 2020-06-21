@@ -45,10 +45,10 @@ const SUPPORT = [
 ];
 
 const SidebarWrapper = styled.div`
-    border: 1px solid black;
     width: 300px;
     height: 100%;
     padding: 30px 0 0 15px;
+    box-shadow: rgba(79, 79, 79, 0.09) 0px 4px 10px;
 
     ul {
         margin-bottom: 30px;

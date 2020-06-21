@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
-    border: 1px solid blue;
     height: 70px;
     flex-shrink: 0;
     display: flex;
