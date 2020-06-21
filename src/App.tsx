@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
 
   body{
     font-size: 1.4rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     color: #444;
     
   }
@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
 
 const theme = {
     lightBlue: '#f0f7fd',
+    darkBlue: '#0075ff',
     popularBoxMargin: '12px',
 };
 

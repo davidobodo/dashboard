@@ -3,9 +3,10 @@ import styled from 'styled-components';
 
 const BoxTotalWrapper = styled.div`
     border: 1px solid blue;
-    height: 70px;
+    // height: 70px;
     display: flex;
-    padding: 12px;
+    justify-content: space-between;
+    padding: 30px;
     margin: ${(props) => props.theme.popularBoxMargin};
     flex: 1;
 
