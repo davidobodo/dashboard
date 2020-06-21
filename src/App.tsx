@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
 
 const theme = {
     lightBlue: '#f0f7fd',
+    popularBoxMargin: '12px',
 };
 
 const AppWrapper = styled.div`
