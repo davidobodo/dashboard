@@ -1,5 +1,8 @@
 import React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+
+import Sidebar from './components/sidebar/sidebar';
+import Header from './components/header/header';
 
 const GlobalStyles = createGlobalStyle`
 *, 
@@ -18,16 +21,34 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.4rem;
     font-family: 'Lato', sans-serif;
     color: #444;
+    
   }
 `;
 
 const theme = {};
 
+const AppWrapper = styled.div`
+    background-color: #fff;
+    padding: 20px;
+    height: 100vh;
+    min-height: 900px;
+    display: flex;
+`;
+
+const AppBody = styled.div`
+    flex: 1;
+`;
+
 const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
-            <div>hello</div>;
+            <AppWrapper>
+                <Sidebar />
+                <AppBody>
+                    <Header />
+                </AppBody>
+            </AppWrapper>
         </ThemeProvider>
     );
 };
