@@ -1,41 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const MANAGEMENTS = [
     {
         title: 'Overview',
-        logo: 'he',
+        logo: faPlus,
+        active: true,
     },
     {
         title: 'Statistics',
-        logo: 'me',
+        logo: faPlus,
     },
     {
         title: 'Patients',
-        logo: 'for',
+        logo: faPlus,
     },
     {
         title: 'PolyClinic',
-        logo: 'th',
+        logo: faPlus,
     },
     {
         title: 'Doctors',
-        logo: 'do',
+        logo: faPlus,
     },
     {
         title: 'Medicines',
-        logo: 'me',
+        logo: faPlus,
     },
 ];
 
 const SUPPORT = [
     {
         title: 'Messages',
-        logo: 'd',
+        logo: faPlus,
     },
     {
         title: 'Settings',
-        logo: 'i',
+        logo: faPlus,
     },
 ];
 
@@ -45,13 +48,34 @@ const SidebarWrapper = styled.div`
     height: 100%;
     padding: 30px 0 0 15px;
 
+    ul {
+        margin-bottom: 30px;
+    }
+
     li {
         list-style: none;
-        padding-left: 30px;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        border-left: 4px solid transparent;
+        font-size: 12px;
+        font-weight: 500;
+
+        &.active {
+            background: linear-gradient(
+                to right,
+                ${(props) => props.theme.lightBlue},
+                #fff
+            );
+            border-color: ${(props) => props.theme.darkBlue};
+        }
     }
 
     h5 {
         padding-left: 30px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
     }
 
     .logo {
@@ -85,15 +109,25 @@ const Sidebar = () => {
             <ul>
                 <h5>MANAGEMENTS</h5>
                 {MANAGEMENTS.map((item) => {
-                    const { logo, title } = item;
-                    return <li key={title}>{title}</li>;
+                    const { logo, title, active } = item;
+                    return (
+                        <li key={title} className={active ? 'active' : ''}>
+                            <FontAwesomeIcon icon={logo} />
+                            {title}
+                        </li>
+                    );
                 })}
             </ul>
             <ul>
                 <h5>SUPPORT</h5>
                 {SUPPORT.map((item) => {
                     const { logo, title } = item;
-                    return <li key={title}>{title}</li>;
+                    return (
+                        <li key={title}>
+                            <FontAwesomeIcon icon={logo} />
+                            {title}
+                        </li>
+                    );
                 })}
             </ul>
         </SidebarWrapper>
