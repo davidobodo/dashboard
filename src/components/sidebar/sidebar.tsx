@@ -60,8 +60,6 @@ const SidebarWrapper = styled.div`
         display: flex;
         align-items: center;
         border-left: 4px solid transparent;
-        font-size: 12px;
-        font-weight: 500;
 
         &.active {
             background: linear-gradient(
@@ -71,13 +69,6 @@ const SidebarWrapper = styled.div`
             );
             border-color: ${(props) => props.theme.darkBlue};
         }
-    }
-
-    h5 {
-        padding-left: 30px;
-        font-weight: 200;
-        letter-spacing: 1px;
-        margin-bottom: 5px;
     }
 
     .logo {
@@ -98,6 +89,22 @@ const SidebarWrapper = styled.div`
             }
         }
     }
+
+    //-----------------------------------------------
+    //component overrides/adjustments
+    //-----------------------------------------------
+
+    h5 {
+        padding-left: 30px;
+        margin-bottom: 5px;
+    }
+
+    li {
+        h5 {
+            padding-left: 0px;
+            margin-bottom: 0px;
+        }
+    }
 `;
 
 const Sidebar = () => {
@@ -109,26 +116,25 @@ const Sidebar = () => {
                 </h2>
             </div>
             <ul>
-                <h5>MANAGEMENTS</h5>
-                <Heading5 bold>MANAGEMENTS</Heading5>
+                <Heading5 light>MANAGEMENTS</Heading5>
                 {MANAGEMENTS.map((item) => {
                     const { logo, title, active } = item;
                     return (
                         <li key={title} className={active ? 'active' : ''}>
                             <FontAwesomeIcon icon={logo} />
-                            {title}
+                            <Heading5 semibold>{title}</Heading5>
                         </li>
                     );
                 })}
             </ul>
             <ul>
-                <h5>SUPPORT</h5>
+                <Heading5 light>SUPPORT</Heading5>
                 {SUPPORT.map((item) => {
                     const { logo, title } = item;
                     return (
                         <li key={title}>
                             <FontAwesomeIcon icon={logo} />
-                            {title}
+                            <Heading5 semibold>{title}</Heading5>
                         </li>
                     );
                 })}
