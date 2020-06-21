@@ -39,6 +39,30 @@ const ContentWrapper = styled.div`
                     margin: ${(props) => props.theme.popularBoxMargin};
                 }
             }
+
+            &__bottom-section {
+                display: flex;
+
+                &__left {
+                    flex-basis: 65%;
+                    display: flex;
+
+                    .box {
+                        height: 300px;
+                        border: 1px solid orange;
+                        margin: ${(props) => props.theme.popularBoxMargin};
+                        flex: 1;
+                    }
+                }
+
+                &__right {
+                    height: 300px;
+                    border: 1px solid orange;
+                    margin: ${(props) => props.theme.popularBoxMargin};
+                    flex: 1;
+                    flex-basis: 35%;
+                }
+            }
         }
     }
 `;
@@ -67,7 +91,13 @@ const Content = () => {
                     </div>
                     <div className="content__body__top-section__right"></div>
                 </div>
-                <div className="content__body__bottom-section"></div>
+                <div className="content__body__bottom-section">
+                    <div className="content__body__bottom-section__left">
+                        <div className="box"></div>
+                        <div className="box"></div>
+                    </div>
+                    <div className="content__body__bottom-section__right"></div>
+                </div>
             </div>
         </ContentWrapper>
     );
