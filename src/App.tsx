@@ -3,6 +3,7 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 import Sidebar from './components/sidebar/sidebar';
 import Header from './components/header/header';
+import Content from './components/content/content';
 
 const GlobalStyles = createGlobalStyle`
 *, 
@@ -25,7 +26,9 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const theme = {};
+const theme = {
+    lightBlue: '#f0f7fd',
+};
 
 const AppWrapper = styled.div`
     background-color: #fff;
@@ -37,6 +40,8 @@ const AppWrapper = styled.div`
 
 const AppBody = styled.div`
     flex: 1;
+    display: flex;
+    flex-direction: column;
 `;
 
 const App = () => {
@@ -47,6 +52,7 @@ const App = () => {
                 <Sidebar />
                 <AppBody>
                     <Header />
+                    <Content />
                 </AppBody>
             </AppWrapper>
         </ThemeProvider>
