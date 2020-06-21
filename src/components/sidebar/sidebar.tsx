@@ -116,25 +116,33 @@ const Sidebar = () => {
                 </h2>
             </div>
             <ul>
-                <Heading5 light>MANAGEMENTS</Heading5>
+                <Heading5 light lightColor>
+                    MANAGEMENTS
+                </Heading5>
                 {MANAGEMENTS.map((item) => {
                     const { logo, title, active } = item;
                     return (
                         <li key={title} className={active ? 'active' : ''}>
                             <FontAwesomeIcon icon={logo} />
-                            <Heading5 semibold>{title}</Heading5>
+                            <Heading5 semibold lightColor>
+                                {title}
+                            </Heading5>
                         </li>
                     );
                 })}
             </ul>
             <ul>
-                <Heading5 light>SUPPORT</Heading5>
+                <Heading5 light lightColor>
+                    SUPPORT
+                </Heading5>
                 {SUPPORT.map((item) => {
                     const { logo, title } = item;
                     return (
                         <li key={title}>
                             <FontAwesomeIcon icon={logo} />
-                            <Heading5 semibold>{title}</Heading5>
+                            <Heading5 semibold lightColor>
+                                {title}
+                            </Heading5>
                         </li>
                     );
                 })}

@@ -9,8 +9,8 @@ interface Heading5Props {
     lightColor?: boolean;
 }
 
-const Heading5Container = styled.h5<Heading5Props>`
-    font-size: 12px;
+const Heading5Container = styled.h6<Heading5Props>`
+    font-size: 10px;
 
     ${({ lightColor }) => lightColor && 'color: rgba(0,0,0,0.4) !important;'}
 

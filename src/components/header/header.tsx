@@ -3,6 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 
+import Heading5 from '../texts/heading-5/heading-5';
+import Heading6 from '../texts/heading-6/heading-6';
+
 import { HeaderWrapper } from './style';
 
 import pic from '../../assets/pic.jpeg';
@@ -29,8 +32,10 @@ const Header = () => {
                         <img src={pic} alt="pic" />
                     </div>
                     <div>
-                        <h5>Barly Vallendito</h5>
-                        <h6>Admin Manager</h6>
+                        <Heading6>Barly Vallendito</Heading6>
+                        <Heading6 semibold lightColor>
+                            Admin Manager
+                        </Heading6>
                     </div>
                 </div>
             </div>
