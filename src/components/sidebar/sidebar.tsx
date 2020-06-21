@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
+import Heading5 from '../texts/heading-5/heading-5';
+
 const MANAGEMENTS = [
     {
         title: 'Overview',
@@ -108,6 +110,7 @@ const Sidebar = () => {
             </div>
             <ul>
                 <h5>MANAGEMENTS</h5>
+                <Heading5 bold>MANAGEMENTS</Heading5>
                 {MANAGEMENTS.map((item) => {
                     const { logo, title, active } = item;
                     return (
