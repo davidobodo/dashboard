@@ -4,6 +4,17 @@ import Heading from '../texts/heading/heading';
 import Tag from '../tag/tag';
 import ThreeDots from '../three-dots/three-dots';
 
+const GENDER_TAGS = [
+    {
+        title: 'Female',
+        color: '#0075ff',
+    },
+    {
+        title: 'Male',
+        color: '#e2eefe',
+    },
+];
+
 const BottomChartContainer = styled.div`
     height: 300px;
     margin: ${(props) => props.theme.popularBoxMargin};
@@ -32,8 +43,10 @@ const BottomChart = () => {
                 <ThreeDots />
             </div>
             <div className="tags-wrapper">
-                <Tag title="Female" />
-                <Tag title="male" />
+                {GENDER_TAGS.map((item) => {
+                    const { title, color } = item;
+                    return <Tag key={title} title={title} color={color} />;
+                })}
             </div>
         </BottomChartContainer>
     );

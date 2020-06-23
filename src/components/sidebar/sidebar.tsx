@@ -143,7 +143,7 @@ const Sidebar = () => {
                     <Heading type="h6" darkColor veryBold>
                         &copy; Poli Clinic. 2020
                     </Heading>
-                    <Heading type="h6" light lightColor>
+                    <Heading type="h6" semibold lightColor>
                         Poli Clinic is a medical management for all doctors,
                         patient &amp; staff.
                     </Heading>

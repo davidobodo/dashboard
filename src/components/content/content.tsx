@@ -70,6 +70,17 @@ const DAYS = [
     },
 ];
 
+const GRAPH_TAGS = [
+    {
+        title: 'Positive Covid',
+        color: '#0075ff',
+    },
+    {
+        title: 'Recovered Covid',
+        color: '#5fe1e0',
+    },
+];
+
 const Content = () => {
     return (
         <ContentWrapper>
@@ -103,11 +114,13 @@ const Content = () => {
                                         </Heading>
                                     </div>
                                     <div className="tags-wrapper">
-                                        {[1, 2].map((item) => {
+                                        {GRAPH_TAGS.map((item) => {
+                                            const { title, color } = item;
                                             return (
                                                 <Tag
-                                                    key={item}
-                                                    title="Positive covid"
+                                                    key={title}
+                                                    title={title}
+                                                    color={color}
                                                 />
                                             );
                                         })}

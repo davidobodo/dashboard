@@ -5,10 +5,11 @@ import Heading from '../texts/heading/heading';
 
 interface TagsProps {
     title: string;
+    color: string;
 }
 
-const TagsWrapper = styled.div`
-    border: 1px solid ${(props) => props.theme.ashColor};
+const TagsWrapper = styled.div<Partial<TagsProps>>`
+    border: 1px solid #e9eff4;
     display: flex;
     align-items: center;
     padding: 3px 5px;
@@ -20,14 +21,15 @@ const TagsWrapper = styled.div`
         height: 10px;
         display: inline-block;
         background-color: ${(props) => props.theme.darkBlue};
+        ${({ color }) => color && `background-color: ${color};`}
         border-radius: 3px;
         margin-right: 5px;
     }
 `;
 
-const Tag: React.FC<TagsProps> = ({ title }) => {
+const Tag: React.FC<TagsProps> = ({ title, color }) => {
     return (
-        <TagsWrapper>
+        <TagsWrapper color={color}>
             <span className="bullet"></span>
             <Heading type="h6" bold lightColor>
                 {title}

@@ -43,6 +43,9 @@ const BottomRightContainer = styled.div`
             }
 
             .right-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
             }
         }
     }

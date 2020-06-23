@@ -58,6 +58,16 @@ const TestCardContainer = styled.div`
             justify-content: center;
             align-items: center;
         }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .card-title {
+                margin-bottom: 2px;
+            }
+        }
     }
 
     .bottom {
@@ -102,12 +112,16 @@ const TestCard = () => {
                     <FontAwesomeIcon icon={faPlus} />
                 </div>
                 <div className="right-section">
-                    <Heading bold darkColor type="h5">
-                        Covid Swab Test
-                    </Heading>
-                    <Heading light lightColor type="h6">
-                        8:00AM - 4:00PM
-                    </Heading>
+                    <div>
+                        <div className="card-title">
+                            <Heading bold darkColor type="h5">
+                                Covid Swab Test
+                            </Heading>
+                        </div>
+                        <Heading light lightColor type="h6">
+                            8:00AM - 4:00PM
+                        </Heading>
+                    </div>
                     <Heading semibold darkColor type="h6">
                         120 Participants
                     </Heading>
