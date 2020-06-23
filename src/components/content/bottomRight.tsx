@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Heading from '../texts/heading/heading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import ThreeDots from '../three-dots/three-dots';
 
 const BottomRightContainer = styled.div`
     height: 300px;
@@ -65,7 +66,7 @@ const BottomRight = () => {
                 <Heading type="h4" veryBold darkColor>
                     Polyclinic Division
                 </Heading>
-                <div>...</div>
+                <ThreeDots />
             </div>
             <div className="body">
                 {[1, 2, 3].map((item) => {

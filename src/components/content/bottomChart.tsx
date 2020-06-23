@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Heading from '../texts/heading/heading';
 import Tag from '../tag/tag';
+import ThreeDots from '../three-dots/three-dots';
 
 const BottomChartContainer = styled.div`
     height: 300px;
@@ -28,7 +29,7 @@ const BottomChart = () => {
                 <Heading type="h4" veryBold darkColor>
                     Patient By Gender
                 </Heading>
-                <div>...</div>
+                <ThreeDots />
             </div>
             <div className="tags-wrapper">
                 <Tag title="Female" />

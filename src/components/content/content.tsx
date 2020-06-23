@@ -9,6 +9,7 @@ import TestCard from '../test-card/testCard';
 import Tag from '../tag/tag';
 import BottomRight from './bottomRight';
 import BottomChart from './bottomChart';
+import ThreeDots from '../three-dots/three-dots';
 
 const MONTHS = [
     'Jan',
@@ -155,7 +156,7 @@ const Content = () => {
                             <Heading type="h4" veryBold darkColor>
                                 Informations
                             </Heading>
-                            <div>...</div>
+                            <ThreeDots />
                         </div>
                         <div className="month-dropdown">
                             <Heading bold darkColor type="h5">
