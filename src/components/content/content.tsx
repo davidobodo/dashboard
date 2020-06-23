@@ -55,7 +55,8 @@ const Content = () => {
                                     </div>
                                 </div>
                                 <div className="graph__innerTop__right-column">
-                                    monthly
+                                    <span>Month</span>
+                                    <span>Weekly</span>
                                 </div>
                             </div>
                             <div></div>

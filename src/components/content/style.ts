@@ -81,6 +81,28 @@ export const ContentWrapper = styled.div`
                                     }
                                 }
                             }
+
+                            &__right-column {
+                                background-color: ${(props) =>
+                                    props.theme.lightBlue};
+                                padding: 15px 10px;
+                                border-radius: 10px;
+                                align-self: flex-start;
+                                font-size: 10px;
+                                font-weight: 800;
+
+                                span {
+                                    padding: 7px 25px;
+                                    color: rgba(0, 0, 0, 0.5);
+
+                                    &:nth-child(1) {
+                                        background-color: #fff;
+                                        border-radius: 8px;
+                                        color: ${(props) =>
+                                            props.theme.darkBlue};
+                                    }
+                                }
+                            }
                         }
                     }
                 }
