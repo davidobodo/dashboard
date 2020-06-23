@@ -9,6 +9,7 @@ interface HeadingProps {
     light?: boolean;
     lightColor?: boolean;
     darkColor?: boolean;
+    darkBlueColor?: boolean;
     type: string;
 }
 
@@ -21,6 +22,8 @@ const HeadingContainer = styled.div<HeadingProps>`
 
     ${({ lightColor }) => lightColor && 'color: rgba(0,0,0,0.4) !important;'}
     ${({ darkColor }) => darkColor && 'color: #131f3e;'}
+    ${({ darkBlueColor }) => darkBlueColor && 'color: #0075ff;'}
+
     
 
     ${({ light }) => light && 'font-weight: 200 !important;'}
@@ -38,6 +41,7 @@ const Heading5: React.FC<HeadingProps> = ({
     type,
     darkColor,
     veryBold,
+    darkBlueColor,
 }) => {
     return (
         <HeadingContainer
@@ -47,6 +51,7 @@ const Heading5: React.FC<HeadingProps> = ({
             semibold={semibold}
             lightColor={lightColor}
             darkColor={darkColor}
+            darkBlueColor={darkBlueColor}
             type={type}
         >
             {children}

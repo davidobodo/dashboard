@@ -4,6 +4,8 @@ import BoxTotal from '../box-total/box-total';
 
 import { ContentWrapper } from './style';
 import Heading from '../texts/heading/heading';
+import Day from '../day/day';
+import { deflateSync } from 'zlib';
 
 const MONTHS = [
     'Jan',
@@ -20,6 +22,49 @@ const MONTHS = [
     'Dec',
 ];
 const Y_AXIS = [100, 80, 60, 40, 20, 0];
+
+const DAYS = [
+    {
+        day: 'Mon',
+        date: 16,
+        active: false,
+    },
+    {
+        day: 'Tue',
+        date: 17,
+        active: false,
+    },
+    {
+        day: 'Wed',
+        date: 18,
+        active: true,
+    },
+    {
+        day: 'Thr',
+        date: 19,
+        active: false,
+    },
+    {
+        day: 'Fri',
+        date: 20,
+        active: false,
+    },
+    {
+        day: 'Sat',
+        date: 21,
+        active: false,
+    },
+    {
+        day: 'Sun',
+        date: 22,
+        active: false,
+    },
+    {
+        day: 'Mon',
+        date: 23,
+        active: false,
+    },
+];
 
 const Content = () => {
     return (
@@ -108,7 +153,33 @@ const Content = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="content__body__top-section__right"></div>
+                    <div className="content__body__top-section__right">
+                        <div className="informations-header">
+                            <Heading type="h4" veryBold darkColor>
+                                Informations
+                            </Heading>
+                            <div>...</div>
+                        </div>
+                        <div className="month-dropdown">
+                            <Heading bold darkColor type="h5">
+                                June
+                            </Heading>
+                            <span className="arrow"></span>
+                        </div>
+                        <div className="days">
+                            {DAYS.map((item) => {
+                                const { day, date, active } = item;
+                                return (
+                                    <Day
+                                        key={day}
+                                        active={active}
+                                        day={day}
+                                        date={date}
+                                    />
+                                );
+                            })}
+                        </div>
+                    </div>
                 </div>
                 <div className="content__body__bottom-section">
                     <div className="content__body__bottom-section__left">
