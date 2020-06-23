@@ -5,7 +5,7 @@ import BoxTotal from '../box-total/box-total';
 import { ContentWrapper } from './style';
 import Heading from '../texts/heading/heading';
 import Day from '../day/day';
-import { deflateSync } from 'zlib';
+import TestCard from '../test-card/testCard';
 
 const MONTHS = [
     'Jan',
@@ -178,6 +178,14 @@ const Content = () => {
                                     />
                                 );
                             })}
+                        </div>
+
+                        <div className="appointment-list">
+                            <Heading bold darkColor type="h5">
+                                Appointment List
+                            </Heading>
+                            <TestCard />
+                            <TestCard />
                         </div>
                     </div>
                 </div>

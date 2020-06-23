@@ -182,6 +182,7 @@ export const ContentWrapper = styled.div`
                     .days {
                         display: flex;
                         justify-content: space-between;
+                        margin-bottom: 25px;
                     }
                 }
             }
