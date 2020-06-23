@@ -7,6 +7,7 @@ import Heading from '../texts/heading/heading';
 import Day from '../day/day';
 import TestCard from '../test-card/testCard';
 import BottomRight from './bottomRight';
+import BottomChart from './bottomChart';
 
 const MONTHS = [
     'Jan',
@@ -194,8 +195,8 @@ const Content = () => {
                 </div>
                 <div className="content__body__bottom-section">
                     <div className="content__body__bottom-section__left">
-                        <div className="box"></div>
-                        <div className="box"></div>
+                        <BottomChart />
+                        <BottomChart />
                     </div>
                     <BottomRight />
                 </div>

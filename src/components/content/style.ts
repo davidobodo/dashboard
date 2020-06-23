@@ -207,10 +207,6 @@ export const ContentWrapper = styled.div`
                     display: flex;
 
                     .box {
-                        height: 300px;
-                        border: 1px solid orange;
-                        margin: ${(props) => props.theme.popularBoxMargin};
-                        flex: 1;
                     }
                 }
             }
