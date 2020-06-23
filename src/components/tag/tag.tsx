@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import { findByTitle } from '@testing-library/react';
+import Heading from '../texts/heading/heading';
 
 interface TagsProps {
     title: string;
@@ -26,7 +26,14 @@ const TagsWrapper = styled.div`
 `;
 
 const Tag: React.FC<TagsProps> = ({ title }) => {
-    return <TagsWrapper>{title}</TagsWrapper>;
+    return (
+        <TagsWrapper>
+            <span className="bullet"></span>
+            <Heading type="h6" bold lightColor>
+                {title}
+            </Heading>
+        </TagsWrapper>
+    );
 };
 
 export default Tag;

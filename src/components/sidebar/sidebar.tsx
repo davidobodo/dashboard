@@ -89,6 +89,30 @@ const Sidebar = () => {
                     );
                 })}
             </ul>
+            <div className="sidebar-info">
+                <Heading bold darkColor type="h5">
+                    Covid Informations
+                </Heading>
+                <div className="world">
+                    <Heading type="h6" light darkBlueColor>
+                        World
+                    </Heading>
+                </div>
+                {[1, 2, 3].map((item) => {
+                    return (
+                        <div className="stat">
+                            <Heading type="h6" light>
+                                Infected -{' '}
+                            </Heading>
+                            <Heading type="h6" darkColor bold>
+                                {' '}
+                                8.119.575
+                            </Heading>
+                        </div>
+                    );
+                })}
+                <button>Check Covid</button>
+            </div>
         </SidebarWrapper>
     );
 };

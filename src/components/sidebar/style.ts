@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const SidebarWrapper = styled.div`
     width: 300px;
-    height: 100%;
     padding: 30px 0 0 15px;
     box-shadow: rgba(79, 79, 79, 0.09) 0px 4px 10px;
 
@@ -43,6 +42,32 @@ export const SidebarWrapper = styled.div`
                 display: inline-block;
                 border-radius: 50%;
             }
+        }
+    }
+
+    .sidebar-info {
+        background-color: ${(props) => props.theme.lightBlue};
+        padding: 15px;
+        border-radius: 10px;
+        margin: 30px;
+
+        .world {
+            margin: 10px 0px;
+        }
+
+        .stat {
+            display: flex;
+            margin-bottom: 5px;
+        }
+
+        button {
+            background-color: ${(props) => props.theme.darkBlue};
+            color: #fff;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 10px;
+            width: 100%;
         }
     }
 

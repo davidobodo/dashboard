@@ -37,7 +37,6 @@ const theme = {
 const AppWrapper = styled.div`
     background-color: #fff;
     padding: 20px;
-    height: 100vh;
     min-height: 900px;
     display: flex;
 `;

@@ -6,6 +6,7 @@ import { ContentWrapper } from './style';
 import Heading from '../texts/heading/heading';
 import Day from '../day/day';
 import TestCard from '../test-card/testCard';
+import Tag from '../tag/tag';
 import BottomRight from './bottomRight';
 import BottomChart from './bottomChart';
 
@@ -103,16 +104,10 @@ const Content = () => {
                                     <div className="tags-wrapper">
                                         {[1, 2].map((item) => {
                                             return (
-                                                <div key={item} className="tag">
-                                                    <span className="bullet"></span>
-                                                    <Heading
-                                                        type="h6"
-                                                        bold
-                                                        lightColor
-                                                    >
-                                                        Positive Covid
-                                                    </Heading>
-                                                </div>
+                                                <Tag
+                                                    key={item}
+                                                    title="Positive covid"
+                                                />
                                             );
                                         })}
                                     </div>
