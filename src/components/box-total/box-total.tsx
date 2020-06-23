@@ -1,27 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
+import Heading from '../texts/heading/heading';
 
 const BoxTotalWrapper = styled.div`
-    border: 1px solid blue;
-    // height: 70px;
     display: flex;
-    justify-content: space-between;
-    padding: 30px;
+    padding: 20px;
     margin: ${(props) => props.theme.popularBoxMargin};
+    background-color: #fff;
     flex: 1;
+    border-radius: 20px;
 
-    .img-wrapper {
-        margin-right: ${(props) => props.theme.popularBoxMargin};
+    .left-section {
+        margin-right: 25px;
+        background-color: ${(props) => props.theme.lightBlue};
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 `;
 
 const BoxTotal = () => {
     return (
         <BoxTotalWrapper>
-            <div className="img-wrapper">image</div>
-            <div>
-                <h4>Total Patients</h4>
-                <h3>24,908</h3>
+            <div className="left-section">
+                <FontAwesomeIcon icon={faPlus} />
+            </div>
+            <div className="right-section">
+                <Heading semibold lightColor type="h5">
+                    Total Patients
+                </Heading>
+                <Heading type="h3" bold darkColor>
+                    24,908
+                </Heading>
             </div>
         </BoxTotalWrapper>
     );
