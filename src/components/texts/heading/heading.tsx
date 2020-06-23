@@ -1,16 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface Heading5Props {
+interface HeadingProps {
     children: React.ReactNode;
     bold?: boolean;
     semibold?: boolean;
     light?: boolean;
     lightColor?: boolean;
+    type: string;
 }
 
-const Heading5Container = styled.h6<Heading5Props>`
-    font-size: 10px;
+const HeadingContainer = styled.div<HeadingProps>`
+    
+    ${({ type }) => type === 'h5' && 'font-size: 12px;'}
+    ${({ type }) => type === 'h6' && 'font-size: 10px;'}
 
     ${({ lightColor }) => lightColor && 'color: rgba(0,0,0,0.4) !important;'}
 
@@ -19,22 +22,24 @@ const Heading5Container = styled.h6<Heading5Props>`
     ${({ bold }) => bold && 'font-weight: 600 !important;'}
 `;
 
-const Heading5: React.FC<Heading5Props> = ({
+const Heading5: React.FC<HeadingProps> = ({
     children,
     bold,
     semibold,
     light,
     lightColor,
+    type,
 }) => {
     return (
-        <Heading5Container
+        <HeadingContainer
             bold={bold}
             light={light}
             semibold={semibold}
             lightColor={lightColor}
+            type={type}
         >
             {children}
-        </Heading5Container>
+        </HeadingContainer>
     );
 };
 

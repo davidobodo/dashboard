@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 
-import Heading5 from '../texts/heading-5/heading-5';
-import Heading6 from '../texts/heading-6/heading-6';
+import Heading from '../texts/heading/heading';
 
 import { HeaderWrapper } from './style';
 
@@ -32,10 +31,10 @@ const Header = () => {
                         <img src={pic} alt="pic" />
                     </div>
                     <div>
-                        <Heading6>Barly Vallendito</Heading6>
-                        <Heading6 semibold lightColor>
+                        <Heading type="h6">Barly Vallendito</Heading>
+                        <Heading type="h6" semibold lightColor>
                             Admin Manager
-                        </Heading6>
+                        </Heading>
                     </div>
                 </div>
             </div>
