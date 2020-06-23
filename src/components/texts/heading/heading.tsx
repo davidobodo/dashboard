@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface HeadingProps {
     children: React.ReactNode;
+    veryBold?: boolean;
     bold?: boolean;
     semibold?: boolean;
     light?: boolean;
@@ -25,6 +26,7 @@ const HeadingContainer = styled.div<HeadingProps>`
     ${({ light }) => light && 'font-weight: 200 !important;'}
     ${({ semibold }) => semibold && 'font-weight: 500 !important;'}
     ${({ bold }) => bold && 'font-weight: 600 !important;'}
+    ${({ veryBold }) => veryBold && 'font-weight: 800 !important;'}
 `;
 
 const Heading5: React.FC<HeadingProps> = ({
@@ -35,9 +37,11 @@ const Heading5: React.FC<HeadingProps> = ({
     lightColor,
     type,
     darkColor,
+    veryBold,
 }) => {
     return (
         <HeadingContainer
+            veryBold={veryBold}
             bold={bold}
             light={light}
             semibold={semibold}

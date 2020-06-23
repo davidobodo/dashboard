@@ -10,7 +10,7 @@ const Content = () => {
         <ContentWrapper>
             <div className="content__header">
                 <div>
-                    <Heading type="h3" bold darkColor>
+                    <Heading type="h3" veryBold darkColor>
                         Poli Overview
                     </Heading>
                     <Heading type="h4" semibold lightColor>
@@ -29,7 +29,37 @@ const Content = () => {
                             <BoxTotal />
                             <BoxTotal />
                         </div>
-                        <div className="graph"> my graph</div>
+                        <div className="graph">
+                            <div className="graph__innerTop">
+                                <div className="graph__innerTop__left-column">
+                                    <div className="covid-stats-header">
+                                        <Heading type="h4" veryBold darkColor>
+                                            Patients Covid Statistics
+                                        </Heading>
+                                    </div>
+                                    <div className="tags-wrapper">
+                                        {[1, 2].map((item) => {
+                                            return (
+                                                <div key={item} className="tag">
+                                                    <span className="bullet"></span>
+                                                    <Heading
+                                                        type="h6"
+                                                        bold
+                                                        lightColor
+                                                    >
+                                                        Positive Covid
+                                                    </Heading>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                                <div className="graph__innerTop__right-column">
+                                    monthly
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
                     </div>
                     <div className="content__body__top-section__right"></div>
                 </div>

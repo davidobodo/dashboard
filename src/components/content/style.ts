@@ -42,9 +42,46 @@ export const ContentWrapper = styled.div`
                     }
 
                     .graph {
-                        border: 1px solid red;
                         height: 400px;
                         margin: ${(props) => props.theme.popularBoxMargin};
+                        background-color: #fff;
+                        border-radius: ${(props) => props.theme.myBorderRadius};
+                        padding: 20px;
+
+                        &__innerTop {
+                            display: flex;
+                            justify-content: space-between;
+
+                            &__left-column {
+                                .covid-stats-header {
+                                    margin-bottom: 15px;
+                                }
+
+                                .tags-wrapper {
+                                    display: flex;
+
+                                    .tag {
+                                        border: 1px solid
+                                            ${(props) => props.theme.ashColor};
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 3px 5px;
+                                        border-radius: 5px;
+                                        margin-right: 10px;
+
+                                        .bullet {
+                                            width: 10px;
+                                            height: 10px;
+                                            display: inline-block;
+                                            background-color: ${(props) =>
+                                                props.theme.darkBlue};
+                                            border-radius: 3px;
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 

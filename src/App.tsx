@@ -31,6 +31,7 @@ const theme = {
     veryDarkBlue: '#131f3e',
     popularBoxMargin: '12px',
     ashColor: '#e9eff4',
+    myBorderRadius: '20px',
 };
 
 const AppWrapper = styled.div`
