@@ -45,6 +45,21 @@ const SUPPORT = [
     },
 ];
 
+const COVID_INFO = [
+    {
+        tag: 'Infected',
+        number: '8.119.575',
+    },
+    {
+        tag: 'Recovered',
+        number: '4.231.974',
+    },
+    {
+        tag: 'Deaths',
+        number: '439.217',
+    },
+];
+
 const Sidebar = () => {
     return (
         <SidebarWrapper>
@@ -65,7 +80,12 @@ const Sidebar = () => {
                         return (
                             <li key={title} className={active ? 'active' : ''}>
                                 <FontAwesomeIcon icon={logo} />
-                                <Heading semibold lightColor type="h5">
+                                <Heading
+                                    semibold
+                                    lightColor={active ? false : true}
+                                    darkBlueColor={active ? true : false}
+                                    type="h5"
+                                >
                                     {title}
                                 </Heading>
                             </li>
@@ -102,15 +122,15 @@ const Sidebar = () => {
                         </Heading>
                     </div>
                     <div className="stat-wrapper">
-                        {[1, 2, 3].map((item) => {
+                        {COVID_INFO.map((item) => {
+                            const { tag, number } = item;
                             return (
-                                <div className="stat">
+                                <div className="stat" key={tag}>
                                     <Heading type="h6" light>
-                                        Infected -{' '}
+                                        {tag} -
                                     </Heading>
                                     <Heading type="h6" darkColor bold>
-                                        {' '}
-                                        8.119.575
+                                        {number}
                                     </Heading>
                                 </div>
                             );
@@ -125,7 +145,7 @@ const Sidebar = () => {
                     </Heading>
                     <Heading type="h6" light lightColor>
                         Poli Clinic is a medical management for all doctors,
-                        patient &amp; staff
+                        patient &amp; staff.
                     </Heading>
                 </footer>
             </section>

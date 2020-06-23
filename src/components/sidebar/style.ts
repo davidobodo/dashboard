@@ -21,6 +21,11 @@ export const SidebarWrapper = styled.div`
         align-items: center;
         border-left: 4px solid transparent;
 
+        svg {
+            margin-right: 10px;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
         &.active {
             background: linear-gradient(
                 to right,
@@ -28,6 +33,10 @@ export const SidebarWrapper = styled.div`
                 #fff
             );
             border-color: ${(props) => props.theme.darkBlue};
+
+            svg {
+                color: ${(props) => props.theme.darkBlue};
+            }
         }
     }
 
