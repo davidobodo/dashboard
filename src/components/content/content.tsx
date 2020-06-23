@@ -3,14 +3,19 @@ import React from 'react';
 import BoxTotal from '../box-total/box-total';
 
 import { ContentWrapper } from './style';
+import Heading from '../texts/heading/heading';
 
 const Content = () => {
     return (
         <ContentWrapper>
             <div className="content__header">
                 <div>
-                    <h3>Poli Overview</h3>
-                    <h4>Welcome Back, Barly</h4>
+                    <Heading type="h3" bold darkColor>
+                        Poli Overview
+                    </Heading>
+                    <Heading type="h4" semibold lightColor>
+                        Welcome Back, Barly
+                    </Heading>
                 </div>
                 <button>
                     <span>+</span> Register Patient

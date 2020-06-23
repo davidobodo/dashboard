@@ -21,7 +21,6 @@ const GlobalStyles = createGlobalStyle`
   body{
     font-size: 1.4rem;
     font-family: 'Quicksand', sans-serif;
-    color: #444;
     
   }
 `;

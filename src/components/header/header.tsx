@@ -31,7 +31,9 @@ const Header = () => {
                         <img src={pic} alt="pic" />
                     </div>
                     <div>
-                        <Heading type="h6">Barly Vallendito</Heading>
+                        <Heading type="h5" bold>
+                            Barly Vallendito
+                        </Heading>
                         <Heading type="h6" semibold lightColor>
                             Admin Manager
                         </Heading>
