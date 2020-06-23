@@ -101,19 +101,22 @@ const Sidebar = () => {
                             World
                         </Heading>
                     </div>
-                    {[1, 2, 3].map((item) => {
-                        return (
-                            <div className="stat">
-                                <Heading type="h6" light>
-                                    Infected -{' '}
-                                </Heading>
-                                <Heading type="h6" darkColor bold>
-                                    {' '}
-                                    8.119.575
-                                </Heading>
-                            </div>
-                        );
-                    })}
+                    <div className="stat-wrapper">
+                        {[1, 2, 3].map((item) => {
+                            return (
+                                <div className="stat">
+                                    <Heading type="h6" light>
+                                        Infected -{' '}
+                                    </Heading>
+                                    <Heading type="h6" darkColor bold>
+                                        {' '}
+                                        8.119.575
+                                    </Heading>
+                                </div>
+                            );
+                        })}
+                    </div>
+
                     <button>Check Covid</button>
                 </div>
                 <footer className="footer">

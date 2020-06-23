@@ -4,9 +4,11 @@ export const SidebarWrapper = styled.div`
     width: 250px;
     padding: 30px 0 40px 15px;
     box-shadow: rgba(79, 79, 79, 0.09) 0px 4px 10px;
+    clip-path: inset(0px -15px 0px 0px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-shrink: 0;
 
     ul {
         margin-bottom: 30px;
@@ -58,9 +60,13 @@ export const SidebarWrapper = styled.div`
             margin: 10px 0px;
         }
 
-        .stat {
-            display: flex;
-            margin-bottom: 5px;
+        .stat-wrapper {
+            margin-bottom: 10px;
+
+            .stat {
+                display: flex;
+                margin-bottom: 5px;
+            }
         }
 
         button {

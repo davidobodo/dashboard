@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
   body{
     font-size: 1.4rem;
     font-family: 'Quicksand', sans-serif;
+    background-color: #f2f5f7;
     
   }
 `;
@@ -36,9 +37,11 @@ const theme = {
 
 const AppWrapper = styled.div`
     background-color: #fff;
+    margin: 20px;
     padding: 20px;
     min-height: 900px;
     display: flex;
+    border-radius: 50px;
 `;
 
 const AppBody = styled.div`
