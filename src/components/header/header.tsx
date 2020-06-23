@@ -32,7 +32,7 @@ const Header = () => {
                     </div>
                     <div>
                         <Heading type="h5" bold>
-                            Barly Vallendito
+                            Obodo David
                         </Heading>
                         <Heading type="h6" semibold lightColor>
                             Admin Manager

@@ -152,6 +152,8 @@ export const ContentWrapper = styled.div`
                     border-radius: ${(props) => props.theme.myBorderRadius};
                     background-color: #fff;
                     padding: 20px;
+                    display: flex;
+                    flex-direction: column;
 
                     .informations-header {
                         display: flex;
@@ -183,6 +185,16 @@ export const ContentWrapper = styled.div`
                         display: flex;
                         justify-content: space-between;
                         margin-bottom: 25px;
+                    }
+
+                    .appointment-list {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+
+                        .header {
+                            margin-bottom: 10px;
+                        }
                     }
                 }
             }

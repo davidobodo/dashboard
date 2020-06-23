@@ -75,7 +75,7 @@ const Content = () => {
                         Poli Overview
                     </Heading>
                     <Heading type="h4" semibold lightColor>
-                        Welcome Back, Barly
+                        Welcome Back, David
                     </Heading>
                 </div>
                 <button>
@@ -181,9 +181,11 @@ const Content = () => {
                         </div>
 
                         <div className="appointment-list">
-                            <Heading bold darkColor type="h5">
-                                Appointment List
-                            </Heading>
+                            <div className="header">
+                                <Heading bold darkColor type="h5">
+                                    Appointment List
+                                </Heading>
+                            </div>
                             <TestCard />
                             <TestCard />
                         </div>
