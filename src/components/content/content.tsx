@@ -5,6 +5,22 @@ import BoxTotal from '../box-total/box-total';
 import { ContentWrapper } from './style';
 import Heading from '../texts/heading/heading';
 
+const MONTHS = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+];
+const Y_AXIS = [100, 80, 60, 40, 20, 0];
+
 const Content = () => {
     return (
         <ContentWrapper>
@@ -29,9 +45,9 @@ const Content = () => {
                             <BoxTotal />
                             <BoxTotal />
                         </div>
-                        <div className="graph">
-                            <div className="graph__innerTop">
-                                <div className="graph__innerTop__left-column">
+                        <div className="graph-wrapper">
+                            <div className="graph-wrapper__header">
+                                <div className="graph-wrapper__header__left-column">
                                     <div className="covid-stats-header">
                                         <Heading type="h4" veryBold darkColor>
                                             Patients Covid Statistics
@@ -54,12 +70,42 @@ const Content = () => {
                                         })}
                                     </div>
                                 </div>
-                                <div className="graph__innerTop__right-column">
+                                <div className="graph-wrapper__header__right-column">
                                     <span>Month</span>
                                     <span>Weekly</span>
                                 </div>
                             </div>
-                            <div></div>
+                            <div className="graph-wrapper__body">
+                                <ul className="y-axis">
+                                    {Y_AXIS.map((val) => {
+                                        return (
+                                            <li key={val}>
+                                                <Heading
+                                                    semibold
+                                                    lightColor
+                                                    type="h5"
+                                                >
+                                                    {val}
+                                                </Heading>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                                <div className="x-axis">
+                                    {MONTHS.map((month) => {
+                                        return (
+                                            <Heading
+                                                key={month}
+                                                semibold
+                                                lightColor
+                                                type="h5"
+                                            >
+                                                {month}
+                                            </Heading>
+                                        );
+                                    })}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="content__body__top-section__right"></div>

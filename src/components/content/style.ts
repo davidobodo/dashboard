@@ -41,16 +41,19 @@ export const ContentWrapper = styled.div`
                         display: flex;
                     }
 
-                    .graph {
+                    .graph-wrapper {
                         height: 400px;
                         margin: ${(props) => props.theme.popularBoxMargin};
                         background-color: #fff;
                         border-radius: ${(props) => props.theme.myBorderRadius};
                         padding: 20px;
+                        display: flex;
+                        flex-direction: column;
 
-                        &__innerTop {
+                        &__header {
                             display: flex;
                             justify-content: space-between;
+                            margin-bottom: 30px;
 
                             &__left-column {
                                 .covid-stats-header {
@@ -100,6 +103,42 @@ export const ContentWrapper = styled.div`
                                         border-radius: 8px;
                                         color: ${(props) =>
                                             props.theme.darkBlue};
+                                    }
+                                }
+                            }
+                        }
+
+                        &__body {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+
+                            .y-axis {
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                list-style: none;
+                                flex: 1;
+                            }
+
+                            .x-axis {
+                                display: flex;
+                                justify-content: space-between;
+                                padding-left: 30px;
+
+                                div {
+                                    position: relative;
+
+                                    &:before {
+                                        content: '';
+                                        position: absolute;
+                                        background-color: ${(props) =>
+                                            props.theme.ashColor};
+                                        width: 1px;
+                                        height: 250px;
+                                        left: 50%;
+                                        bottom: 20px;
                                     }
                                 }
                             }
