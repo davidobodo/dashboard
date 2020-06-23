@@ -10,6 +10,24 @@ export const ContentWrapper = styled.div`
             display: flex;
             justify-content: space-between;
             margin: ${(props) => props.theme.popularBoxMargin};
+
+            button {
+                padding: 15px 30px;
+                color: #fff;
+                font-weight: 500;
+                border-radius: 10px;
+                border: none;
+                background-color: ${(props) => props.theme.darkBlue};
+                font-size: 12px;
+                letter-spacing: 1px;
+                display: flex;
+                align-items: center;
+
+                span {
+                    margin-right: 5px;
+                    font-size: 20px;
+                }
+            }
         }
 
         &__body {
