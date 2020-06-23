@@ -6,6 +6,7 @@ import { ContentWrapper } from './style';
 import Heading from '../texts/heading/heading';
 import Day from '../day/day';
 import TestCard from '../test-card/testCard';
+import BottomRight from './bottomRight';
 
 const MONTHS = [
     'Jan',
@@ -196,7 +197,7 @@ const Content = () => {
                         <div className="box"></div>
                         <div className="box"></div>
                     </div>
-                    <div className="content__body__bottom-section__right"></div>
+                    <BottomRight />
                 </div>
             </div>
         </ContentWrapper>

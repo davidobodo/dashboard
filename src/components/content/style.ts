@@ -213,14 +213,6 @@ export const ContentWrapper = styled.div`
                         flex: 1;
                     }
                 }
-
-                &__right {
-                    height: 300px;
-                    border: 1px solid orange;
-                    margin: ${(props) => props.theme.popularBoxMargin};
-                    flex: 1;
-                    flex-basis: 35%;
-                }
             }
         }
     }
