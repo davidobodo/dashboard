@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const SidebarWrapper = styled.div`
-    width: 300px;
-    padding: 30px 0 0 15px;
+    width: 250px;
+    padding: 30px 0 40px 15px;
     box-shadow: rgba(79, 79, 79, 0.09) 0px 4px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     ul {
         margin-bottom: 30px;
@@ -68,6 +71,16 @@ export const SidebarWrapper = styled.div`
             border-radius: 10px;
             font-size: 10px;
             width: 100%;
+        }
+    }
+
+    .footer {
+        padding: 30px;
+        margin-top: 15px;
+        border-top: 1px solid ${(props) => props.theme.ashColor};
+
+        div {
+            margin-bottom: 5px;
         }
     }
 
