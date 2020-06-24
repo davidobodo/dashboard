@@ -14,7 +14,7 @@ const BoxTotalWrapper = styled.div`
     border-radius: 20px;
 
     .left-section {
-        margin-right: 25px;
+        margin-right: 20px;
         background-color: ${(props) => props.theme.lightBlue};
         width: 50px;
         height: 50px;
