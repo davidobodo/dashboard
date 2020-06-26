@@ -6,26 +6,10 @@ import { ContentWrapper } from './style';
 import Heading from '../texts/heading/heading';
 import Day from '../day/day';
 import TestCard from '../test-card/testCard';
-import Tag from '../tag/tag';
 import BottomRight from './bottomRight';
 import BottomChart from './bottomChart';
 import ThreeDots from '../three-dots/three-dots';
-
-const MONTHS = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-];
-const Y_AXIS = [100, 80, 60, 40, 20, 0];
+import Graph from './graph';
 
 const DAYS = [
     {
@@ -70,17 +54,6 @@ const DAYS = [
     },
 ];
 
-const GRAPH_TAGS = [
-    {
-        title: 'Positive Covid',
-        color: '#0075ff',
-    },
-    {
-        title: 'Recovered Covid',
-        color: '#5fe1e0',
-    },
-];
-
 const Content = () => {
     return (
         <ContentWrapper>
@@ -105,64 +78,7 @@ const Content = () => {
                             <BoxTotal />
                             <BoxTotal />
                         </div>
-                        <div className="graph-wrapper">
-                            <div className="graph-wrapper__header">
-                                <div className="graph-wrapper__header__left-column">
-                                    <div className="covid-stats-header">
-                                        <Heading type="h4" veryBold darkColor>
-                                            Patients Covid Statistics
-                                        </Heading>
-                                    </div>
-                                    <div className="tags-wrapper">
-                                        {GRAPH_TAGS.map((item) => {
-                                            const { title, color } = item;
-                                            return (
-                                                <Tag
-                                                    key={title}
-                                                    title={title}
-                                                    color={color}
-                                                />
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                                <div className="graph-wrapper__header__right-column">
-                                    <span>Month</span>
-                                    <span>Weekly</span>
-                                </div>
-                            </div>
-                            <div className="graph-wrapper__body">
-                                <ul className="y-axis">
-                                    {Y_AXIS.map((val) => {
-                                        return (
-                                            <li key={val}>
-                                                <Heading
-                                                    semibold
-                                                    lightColor
-                                                    type="h5"
-                                                >
-                                                    {val}
-                                                </Heading>
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
-                                <div className="x-axis">
-                                    {MONTHS.map((month) => {
-                                        return (
-                                            <Heading
-                                                key={month}
-                                                semibold
-                                                lightColor
-                                                type="h5"
-                                            >
-                                                {month}
-                                            </Heading>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        </div>
+                        <Graph />
                     </div>
                     <div className="content__body__top-section__right">
                         <div className="informations-header">
