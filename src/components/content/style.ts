@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../constants';
 
 export const ContentWrapper = styled.div`
     background-color: ${(props) => props.theme.lightBlue};
@@ -34,8 +35,16 @@ export const ContentWrapper = styled.div`
             &__top-section {
                 display: flex;
 
+                @media ${devices.laptop} {
+                    flex-wrap: wrap;
+                }
+
                 &__left {
                     flex-basis: 65%;
+
+                    @media ${devices.laptop} {
+                        flex-basis: 100%;
+                    }
 
                     .total {
                         display: flex;
@@ -154,6 +163,10 @@ export const ContentWrapper = styled.div`
                     padding: 20px;
                     display: flex;
                     flex-direction: column;
+
+                    @media ${devices.laptop} {
+                        flex-basis: 100%;
+                    }
 
                     .informations-header {
                         display: flex;

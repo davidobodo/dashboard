@@ -26,11 +26,6 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export const devices = {
-    tablet: `(min-width: 768px)`,
-    laptop: `(min-width: 1170px)`,
-};
-
 const theme = {
     lightBlue: '#f0f7fd',
     darkBlue: '#0075ff',
