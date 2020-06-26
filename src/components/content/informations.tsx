@@ -111,12 +111,12 @@ const InformationsWrapper = styled.div`
 const Informations = () => {
     return (
         <InformationsWrapper>
-            <div className="informations-header">
+            <header className="informations-header">
                 <Heading type="h4" veryBold darkColor>
                     Informations
                 </Heading>
                 <ThreeDots />
-            </div>
+            </header>
             <div className="month-dropdown">
                 <Heading bold darkColor type="h5">
                     June
@@ -133,11 +133,11 @@ const Informations = () => {
             </div>
 
             <div className="appointment-list">
-                <div className="header">
+                <header className="header">
                     <Heading bold darkColor type="h5">
                         Appointment List
                     </Heading>
-                </div>
+                </header>
                 <TestCard />
                 <TestCard />
             </div>
