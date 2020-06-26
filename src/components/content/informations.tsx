@@ -52,7 +52,8 @@ const DAYS = [
 ];
 
 const InformationsWrapper = styled.div`
-    flex-basis: 35%;
+    flex-basis: 30%;
+    flex: 1;
     margin: ${(props) => props.theme.popularBoxMargin};
     border-radius: ${(props) => props.theme.myBorderRadius};
     background-color: #fff;

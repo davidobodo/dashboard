@@ -9,7 +9,7 @@ const BottomRightContainer = styled.div`
     height: 300px;
     margin: ${(props) => props.theme.popularBoxMargin};
     flex: 1;
-    flex-basis: 35%;
+    flex-basis: 30%;
     border-radius: ${(props) => props.theme.myBorderRadius};
     background-color: #fff;
     padding: 20px;

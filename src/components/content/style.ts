@@ -50,20 +50,19 @@ export const ContentWrapper = styled.div`
                         display: flex;
                     }
                 }
-
-                &__right {
-                }
             }
 
             &__bottom-section {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
 
                 &__left {
                     flex-basis: 65%;
                     display: flex;
 
-                    .box {
+                    @media ${devices.laptop} {
+                        flex-basis: 100%;
                     }
                 }
             }

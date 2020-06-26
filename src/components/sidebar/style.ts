@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../constants';
 
 export const SidebarWrapper = styled.div`
     width: 250px;
@@ -9,6 +10,10 @@ export const SidebarWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     flex-shrink: 0;
+
+    @media ${devices.tablet} {
+        display: none;
+    }
 
     ul {
         margin-bottom: 30px;
