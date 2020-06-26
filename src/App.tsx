@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { theme } from './constants';
 
 import Sidebar from './components/sidebar/sidebar';
 import Header from './components/header/header';
 import Content from './components/content/content';
+import Hamburger from './components/hamburger/hamburger';
 
 const GlobalStyles = createGlobalStyle`
 *, 
@@ -34,6 +35,7 @@ const AppWrapper = styled.div`
     padding: 20px;
     background-color: #fff;
     border-radius: 50px;
+    position: relative;
 `;
 
 const AppBody = styled.div`
@@ -43,10 +45,19 @@ const AppBody = styled.div`
 `;
 
 const App = () => {
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+    const handleShowNavbar = () => {
+        setIsNavbarOpen(!isNavbarOpen);
+    };
+
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
             <AppWrapper>
+                {/* <Hamburger
+          handleShowNavbar={handleShowNavbar}
+          isNavbarOpen={isNavbarOpen} /> */}
                 <Sidebar />
                 <AppBody>
                     <Header />

@@ -14,8 +14,17 @@ export const SidebarWrapper = styled.div`
         display: none;
     }
 
+    @media ${devices.tablet} {
+        width: 40px;
+        overflow: hidden;
+    }
+
     ul {
         margin-bottom: 30px;
+
+        @media ${devices.tablet} {
+            opacity: 0;
+        }
     }
 
     li {

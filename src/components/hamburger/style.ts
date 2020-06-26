@@ -3,20 +3,21 @@ import { devices } from '../../constants';
 import { Props } from './IHamburger';
 
 export const HamburgerContainer = styled.div<Props>`
-    position: fixed;
+    position: absolute;
     z-index: 50;
-    right: 45px;
-    top: 35px;
+    left: 20px;
+    top: 55px;
     cursor: pointer;
 
-    @media ${devices.mobile}{
+    @media ${devices.tablet}{
         display: none;
     }
+
 
     .hamburger{
             width: 25px;
             height: 3px;
-            background-color: #000000;
+            background-color: rgba(0,0,0,0.5);
             align-self: center;
             ${({ isNavbarOpen }) =>
                 isNavbarOpen && 'height: 0'}; // change icon to cancel icon
