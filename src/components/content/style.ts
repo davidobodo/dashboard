@@ -214,6 +214,7 @@ export const ContentWrapper = styled.div`
 
             &__bottom-section {
                 display: flex;
+                flex-wrap: wrap;
 
                 &__left {
                     flex-basis: 65%;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Heading from '../texts/heading/heading';
 import Tag from '../tag/tag';
 import ThreeDots from '../three-dots/three-dots';
+import Doughnut from '../doughnut-chart/doughnut-chart';
 
 const GENDER_TAGS = [
     {
@@ -16,7 +17,6 @@ const GENDER_TAGS = [
 ];
 
 const BottomChartContainer = styled.div`
-    height: 300px;
     margin: ${(props) => props.theme.popularBoxMargin};
     flex: 1;
     border-radius: ${(props) => props.theme.myBorderRadius};
@@ -26,6 +26,11 @@ const BottomChartContainer = styled.div`
     .header {
         display: flex;
         justify-content: space-between;
+    }
+
+    .doughnut-wrapper {
+        display: flex;
+        justify-content: center;
     }
 
     .tags-wrapper {
@@ -41,6 +46,9 @@ const BottomChart = () => {
                     Patient By Gender
                 </Heading>
                 <ThreeDots />
+            </div>
+            <div className="doughnut-wrapper">
+                <Doughnut />
             </div>
             <div className="tags-wrapper">
                 {GENDER_TAGS.map((item) => {
