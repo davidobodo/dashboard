@@ -24,8 +24,6 @@ const HeadingContainer = styled.div<HeadingProps>`
     ${({ darkColor }) => darkColor && 'color: #131f3e;'}
     ${({ darkBlueColor }) => darkBlueColor && 'color: #0075ff;'}
 
-    
-
     ${({ light }) => light && 'font-weight: 200 !important;'}
     ${({ semibold }) => semibold && 'font-weight: 500 !important;'}
     ${({ bold }) => bold && 'font-weight: 600 !important;'}

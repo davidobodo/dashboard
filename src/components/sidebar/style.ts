@@ -10,7 +10,7 @@ export const SidebarWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    @media ${devices.tablet} {
+    @media ${devices.mobile} {
         display: none;
     }
 

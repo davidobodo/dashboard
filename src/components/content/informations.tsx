@@ -61,7 +61,7 @@ const InformationsWrapper = styled.div`
     display: flex;
     flex-direction: column;
 
-    @media ${devices.laptop} {
+    @media ${devices.tablet} {
         flex-basis: 100%;
     }
 

@@ -40,14 +40,14 @@ export const ContentBody = styled.div`
     .top-section {
         display: flex;
 
-        @media ${devices.laptop} {
+        @media ${devices.tablet} {
             flex-wrap: wrap;
         }
 
         .statistics {
             flex-basis: 65%;
 
-            @media ${devices.laptop} {
+            @media ${devices.tablet} {
                 flex-basis: 100%;
             }
 
@@ -66,7 +66,7 @@ export const ContentBody = styled.div`
             flex-basis: 65%;
             display: flex;
 
-            @media ${devices.laptop} {
+            @media ${devices.tablet} {
                 flex-basis: 100%;
             }
         }
