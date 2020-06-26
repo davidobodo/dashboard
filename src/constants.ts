@@ -11,3 +11,30 @@ export const theme = {
     ashColor: '#e9eff4',
     myBorderRadius: '20px',
 };
+
+export const MONTHS = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+];
+export const Y_AXIS = [100, 80, 60, 40, 20, 0];
+
+export const GRAPH_TAGS = [
+    {
+        title: 'Positive Covid',
+        color: '#0075ff',
+    },
+    {
+        title: 'Recovered Covid',
+        color: '#5fe1e0',
+    },
+];

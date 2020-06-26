@@ -72,3 +72,84 @@ export const ContentBody = styled.div`
         }
     }
 `;
+
+export const GraphContainer = styled.div`
+    height: 400px;
+    margin: ${(props) => props.theme.popularBoxMargin};
+    background-color: #fff;
+    border-radius: ${(props) => props.theme.myBorderRadius};
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        &__left-column {
+            .covid-stats-header {
+                margin-bottom: 15px;
+            }
+
+            .tags-wrapper {
+                display: flex;
+            }
+        }
+
+        &__right-column {
+            background-color: ${(props) => props.theme.lightBlue};
+            padding: 15px 10px;
+            border-radius: 10px;
+            align-self: flex-start;
+            font-size: 10px;
+            font-weight: 800;
+
+            span {
+                padding: 7px 25px;
+                color: rgba(0, 0, 0, 0.5);
+
+                &:nth-child(1) {
+                    background-color: #fff;
+                    border-radius: 8px;
+                    color: ${(props) => props.theme.darkBlue};
+                }
+            }
+        }
+    }
+
+    .body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .y-axis {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            list-style: none;
+            flex: 1;
+        }
+
+        .x-axis {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 30px;
+
+            div {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    background-color: ${(props) => props.theme.ashColor};
+                    width: 1px;
+                    height: 250px;
+                    left: 50%;
+                    bottom: 20px;
+                }
+            }
+        }
+    }
+`;
