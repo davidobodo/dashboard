@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Tag from '../tag/tag';
 import Heading from '../texts/heading/heading';
 import { GraphContainer } from './style';

@@ -5,7 +5,6 @@ import { theme } from './constants';
 import Sidebar from './components/sidebar/sidebar';
 import Header from './components/header/header';
 import Content from './components/content/content';
-import Hamburger from './components/hamburger/hamburger';
 
 const GlobalStyles = createGlobalStyle`
 *, 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { DoughnutProps } from './interface';
 import { TAG_DETAILS } from '../content/interface';
 
 export const DoughnutContainer = styled.div`
