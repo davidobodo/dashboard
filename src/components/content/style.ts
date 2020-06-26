@@ -53,6 +53,10 @@ export const ContentBody = styled.div`
 
             .total {
                 display: flex;
+
+                @media ${devices.mobile} {
+                    flex-wrap: wrap;
+                }
             }
         }
     }
@@ -68,6 +72,10 @@ export const ContentBody = styled.div`
 
             @media ${devices.tablet} {
                 flex-basis: 100%;
+            }
+
+            @media ${devices.mobile} {
+                flex-wrap: wrap;
             }
         }
     }
@@ -136,6 +144,12 @@ export const GraphContainer = styled.div`
             display: flex;
             justify-content: space-between;
             padding-left: 30px;
+
+            @media ${devices.mobile} {
+                div:nth-child(2n) {
+                    display: none;
+                }
+            }
 
             div {
                 position: relative;

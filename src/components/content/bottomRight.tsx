@@ -6,7 +6,6 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import ThreeDots from '../three-dots/three-dots';
 
 const BottomRightContainer = styled.div`
-    height: 300px;
     margin: ${(props) => props.theme.popularBoxMargin};
     flex: 1;
     flex-basis: 30%;

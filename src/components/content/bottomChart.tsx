@@ -31,6 +31,7 @@ const BottomChartContainer = styled.div`
     .doughnut-wrapper {
         display: flex;
         justify-content: center;
+        margin: 20px 0;
     }
 
     .tags-wrapper {

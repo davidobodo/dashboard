@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../constants';
 
 export const HeaderWrapper = styled.div`
     height: 70px;
@@ -12,6 +13,10 @@ export const HeaderWrapper = styled.div`
         border: 1px solid ${(props) => props.theme.ashColor};
         padding: 0 20px;
         border-radius: 30px;
+
+        @media ${devices.mobile} {
+            display: none;
+        }
 
         .input-wrapper {
             border-right: 1px solid ${(props) => props.theme.ashColor};
