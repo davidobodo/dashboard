@@ -20,7 +20,6 @@ const TagsWrapper = styled.div<Partial<TagsProps>>`
         width: 10px;
         height: 10px;
         display: inline-block;
-        background-color: ${(props) => props.theme.darkBlue};
         ${({ color }) => color && `background-color: ${color};`}
         border-radius: 3px;
         margin-right: 5px;
