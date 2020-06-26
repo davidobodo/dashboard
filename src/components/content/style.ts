@@ -7,64 +7,67 @@ export const ContentWrapper = styled.div`
     padding: 30px;
 
     .content {
-        &__header {
-            display: flex;
-            justify-content: space-between;
-            margin: ${(props) => props.theme.popularBoxMargin};
+        &__body {
+        }
+    }
+`;
 
-            button {
-                padding: 15px 30px;
-                color: #fff;
-                font-weight: 500;
-                border-radius: 10px;
-                border: none;
-                background-color: ${(props) => props.theme.darkBlue};
-                font-size: 12px;
-                letter-spacing: 1px;
-                display: flex;
-                align-items: center;
+export const ContentHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: ${(props) => props.theme.popularBoxMargin};
 
-                span {
-                    margin-right: 5px;
-                    font-size: 20px;
-                }
-            }
+    button {
+        padding: 15px 30px;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 10px;
+        border: none;
+        background-color: ${(props) => props.theme.darkBlue};
+        font-size: 12px;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-right: 5px;
+            font-size: 20px;
+        }
+    }
+`;
+
+export const ContentBody = styled.div`
+    .top-section {
+        display: flex;
+
+        @media ${devices.laptop} {
+            flex-wrap: wrap;
         }
 
-        &__body {
-            &__top-section {
-                display: flex;
+        .statistics {
+            flex-basis: 65%;
 
-                @media ${devices.laptop} {
-                    flex-wrap: wrap;
-                }
-
-                &__left {
-                    flex-basis: 65%;
-
-                    @media ${devices.laptop} {
-                        flex-basis: 100%;
-                    }
-
-                    .total {
-                        display: flex;
-                    }
-                }
+            @media ${devices.laptop} {
+                flex-basis: 100%;
             }
 
-            &__bottom-section {
+            .total {
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+            }
+        }
+    }
 
-                &__left {
-                    flex-basis: 65%;
-                    display: flex;
+    .bottom-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
-                    @media ${devices.laptop} {
-                        flex-basis: 100%;
-                    }
-                }
+        .doughnut-charts {
+            flex-basis: 65%;
+            display: flex;
+
+            @media ${devices.laptop} {
+                flex-basis: 100%;
             }
         }
     }

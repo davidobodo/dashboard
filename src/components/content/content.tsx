@@ -2,7 +2,7 @@ import React from 'react';
 
 import BoxTotal from '../box-total/box-total';
 
-import { ContentWrapper } from './style';
+import { ContentWrapper, ContentHeader, ContentBody } from './style';
 import Heading from '../texts/heading/heading';
 import BottomRight from './bottomRight';
 import BottomChart from './bottomChart';
@@ -12,22 +12,22 @@ import Informations from './informations';
 const Content = () => {
     return (
         <ContentWrapper>
-            <div className="content__header">
-                <div>
+            <ContentHeader>
+                <section>
                     <Heading type="h3" veryBold darkColor>
                         Poli Overview
                     </Heading>
                     <Heading type="h4" semibold lightColor>
                         Welcome Back, David
                     </Heading>
-                </div>
+                </section>
                 <button>
                     <span>+</span> Register Patient
                 </button>
-            </div>
-            <div className="content__body">
-                <div className="content__body__top-section">
-                    <div className="content__body__top-section__left">
+            </ContentHeader>
+            <ContentBody>
+                <div className="top-section">
+                    <div className="statistics">
                         <div className="total">
                             <BoxTotal />
                             <BoxTotal />
@@ -37,14 +37,14 @@ const Content = () => {
                     </div>
                     <Informations />
                 </div>
-                <div className="content__body__bottom-section">
-                    <div className="content__body__bottom-section__left">
+                <div className="bottom-section">
+                    <div className="doughnut-charts">
                         <BottomChart />
                         <BottomChart />
                     </div>
                     <BottomRight />
                 </div>
-            </div>
+            </ContentBody>
         </ContentWrapper>
     );
 };
