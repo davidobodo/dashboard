@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
     height: 70px;
-    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +10,6 @@ export const HeaderWrapper = styled.div`
     .left-side {
         display: flex;
         border: 1px solid ${(props) => props.theme.ashColor};
-        align-items: center;
         padding: 0 20px;
         border-radius: 30px;
 

@@ -3,10 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 
-import Heading from '../texts/heading/heading';
-
 import { HeaderWrapper } from './style';
-
+import Heading from '../texts/heading/heading';
 import pic from '../../assets/pic.jpeg';
 
 const Header = () => {

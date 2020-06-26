@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { theme } from './constants';
 
 import Sidebar from './components/sidebar/sidebar';
 import Header from './components/header/header';
@@ -26,21 +27,12 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const theme = {
-    lightBlue: '#f0f7fd',
-    darkBlue: '#0075ff',
-    veryDarkBlue: '#131f3e',
-    popularBoxMargin: '12px',
-    ashColor: '#e9eff4',
-    myBorderRadius: '20px',
-};
-
 const AppWrapper = styled.div`
-    background-color: #fff;
+    display: flex;
+    min-height: 900px;
     margin: 20px;
     padding: 20px;
-    min-height: 900px;
-    display: flex;
+    background-color: #fff;
     border-radius: 50px;
 `;
 
