@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { DoughnutProps } from './interface';
+import { TAG_DETAILS } from '../content/interface';
 
 export const DoughnutContainer = styled.div`
     width: 220px;
@@ -8,6 +10,7 @@ export const DoughnutContainer = styled.div`
     align-items: center;
     background-color: #f3faff;
     border-radius: 100%;
+
     .wrapper {
         position: relative;
         height: calc(var(--size, 200) * 1px);
@@ -24,32 +27,36 @@ export const DoughnutContainer = styled.div`
             left: 25px;
             top: 25px;
             border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .another-inner-circle {
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    opacity: 0.2;
+                }
+            }
         }
+    }
+`;
 
-        .segment {
-            &:nth-child(1) {
-                --offset: 20;
-                --value: 60;
-                --over50: 1;
-                --bg: #db0a5b;
-            }
-            &:nth-child(2) {
-                --offset: 80;
-                --value: 5;
-                --bg: #22a7f0;
-            }
-            &:nth-child(3) {
-                --offset: 85;
-                --value: 15;
-                --bg: #2ecc71;
-            }
-            &:nth-child(4) {
-                --offset: 100;
-                --value: 20;
-                --bg: #4d05e8;
-            }
+export const Segment = styled.div<Partial<TAG_DETAILS>>`
 
-            --a: calc(var(--over50, 0) * -100%);
+${({ amount }) => amount && `--value: ${amount};`}
+${({ color }) => color && `--bg: ${color};`}
+${({ offset }) => offset && `--offset: ${offset};`}
+--over50: ${({ amount }) => (amount && amount > 50 ? '1' : '0')};
+
+
+--a: calc(var(--over50, 0) * -100%);
             --b: calc((1 + var(--over50, 0)) * 100%);
             --degrees: calc((var(--offset, 0) / 100) * 360);
             position: absolute;
@@ -84,6 +91,5 @@ export const DoughnutContainer = styled.div`
                     rotate(calc(var(--degrees) * 1deg));
                 transform-origin: 50% 0;
             }
-        }
-    }
+
 `;

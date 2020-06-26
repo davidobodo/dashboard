@@ -4,17 +4,9 @@ import Heading from '../texts/heading/heading';
 import Tag from '../tag/tag';
 import ThreeDots from '../three-dots/three-dots';
 import Doughnut from '../doughnut-chart/doughnut-chart';
+import { TAG_DETAILS } from './interface';
 
-const GENDER_TAGS = [
-    {
-        title: 'Female',
-        color: '#0075ff',
-    },
-    {
-        title: 'Male',
-        color: '#e2eefe',
-    },
-];
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 const BottomChartContainer = styled.div`
     margin: ${(props) => props.theme.popularBoxMargin};
@@ -39,20 +31,26 @@ const BottomChartContainer = styled.div`
     }
 `;
 
-const BottomChart = () => {
+interface Props {
+    title: string;
+    value: Array<TAG_DETAILS>;
+    icon: IconDefinition;
+}
+
+const BottomChart: React.FC<Props> = ({ title, value, icon }) => {
     return (
         <BottomChartContainer>
             <div className="header">
                 <Heading type="h4" veryBold darkColor>
-                    Patient By Gender
+                    {title}
                 </Heading>
                 <ThreeDots />
             </div>
             <div className="doughnut-wrapper">
-                <Doughnut />
+                <Doughnut segments={value} icon={icon} />
             </div>
             <div className="tags-wrapper">
-                {GENDER_TAGS.map((item) => {
+                {value.map((item) => {
                     const { title, color } = item;
                     return <Tag key={title} title={title} color={color} />;
                 })}

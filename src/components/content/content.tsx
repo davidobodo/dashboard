@@ -8,6 +8,10 @@ import BottomRight from './bottomRight';
 import BottomChart from './bottomChart';
 import Graph from './graph';
 import Informations from './informations';
+import { GENDER_TAGS, GROUPS_TAGS } from '../../constants';
+
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPassport } from '@fortawesome/free-solid-svg-icons';
 
 const Content = () => {
     return (
@@ -39,8 +43,16 @@ const Content = () => {
                 </div>
                 <div className="bottom-section">
                     <div className="doughnut-charts">
-                        <BottomChart />
-                        <BottomChart />
+                        <BottomChart
+                            title="Patient By Gender"
+                            value={GENDER_TAGS}
+                            icon={faPlus}
+                        />
+                        <BottomChart
+                            title="Top Patient By Group"
+                            value={GROUPS_TAGS}
+                            icon={faPassport}
+                        />
                     </div>
                     <BottomRight />
                 </div>
