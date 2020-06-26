@@ -130,13 +130,12 @@ const Sidebar = () => {
                                         {tag} -
                                     </Heading>
                                     <Heading type="h6" darkColor bold>
-                                        {number}
+                                        &nbsp;{number}
                                     </Heading>
                                 </div>
                             );
                         })}
                     </div>
-
                     <button>Check Covid</button>
                 </div>
                 <footer className="footer">

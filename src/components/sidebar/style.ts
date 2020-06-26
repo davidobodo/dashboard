@@ -9,7 +9,6 @@ export const SidebarWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-shrink: 0;
 
     @media ${devices.tablet} {
         display: none;
@@ -26,11 +25,6 @@ export const SidebarWrapper = styled.div`
         align-items: center;
         border-left: 4px solid transparent;
 
-        svg {
-            margin-right: 10px;
-            color: rgba(0, 0, 0, 0.4);
-        }
-
         &.active {
             background: linear-gradient(
                 to right,
@@ -42,6 +36,11 @@ export const SidebarWrapper = styled.div`
             svg {
                 color: ${(props) => props.theme.darkBlue};
             }
+        }
+
+        svg {
+            margin-right: 10px;
+            color: rgba(0, 0, 0, 0.4);
         }
     }
 
