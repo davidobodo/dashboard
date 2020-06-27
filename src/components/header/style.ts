@@ -8,6 +8,10 @@ export const HeaderWrapper = styled.div`
     align-items: center;
     padding: 0 42px;
 
+    @media ${devices.mobile} {
+        padding: 0;
+    }
+
     .left-side {
         display: flex;
         border: 1px solid ${(props) => props.theme.ashColor};
