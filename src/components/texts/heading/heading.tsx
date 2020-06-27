@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { devices } from '../../../constants';
 
 interface HeadingProps {
     children: React.ReactNode;
@@ -19,6 +20,13 @@ const HeadingContainer = styled.div<HeadingProps>`
     ${({ type }) => type === 'h4' && 'font-size: 16px;'}
     ${({ type }) => type === 'h5' && 'font-size: 12px;'}
     ${({ type }) => type === 'h6' && 'font-size: 10px;'}
+
+    @media ${devices.mobile}{
+        ${({ type }) => type === 'h3' && 'font-size: 16px;'}
+        ${({ type }) => type === 'h4' && 'font-size: 14px;'}
+        ${({ type }) => type === 'h5' && 'font-size: 10px;'}
+        ${({ type }) => type === 'h6' && 'font-size: 8px;'}
+    }
 
     ${({ lightColor }) => lightColor && 'color: rgba(0,0,0,0.4) !important;'}
     ${({ darkColor }) => darkColor && 'color: #131f3e;'}

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { TAG_DETAILS } from '../content/interface';
+import { devices } from '../../constants';
 
 export const DoughnutContainer = styled.div`
     width: 220px;
@@ -10,6 +11,11 @@ export const DoughnutContainer = styled.div`
     background-color: #f3faff;
     border-radius: 100%;
 
+    @media ${devices.mobile} {
+        width: 170px;
+        height: 170px;
+    }
+
     .wrapper {
         position: relative;
         height: calc(var(--size, 200) * 1px);
@@ -17,6 +23,11 @@ export const DoughnutContainer = styled.div`
         background: #639;
         border-radius: 100%;
         overflow: hidden;
+
+        @media ${devices.mobile} {
+            height: calc(var(--size, 150) * 1px);
+            width: calc(var(--size, 150) * 1px);
+        }
 
         .inner-circle {
             width: 150px;
@@ -30,6 +41,11 @@ export const DoughnutContainer = styled.div`
             justify-content: center;
             align-items: center;
 
+            @media ${devices.mobile} {
+                width: 100px;
+                height: 100px;
+            }
+
             .another-inner-circle {
                 width: 60px;
                 height: 60px;
@@ -38,6 +54,11 @@ export const DoughnutContainer = styled.div`
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                @media ${devices.mobile} {
+                    width: 30px;
+                    height: 30px;
+                }
 
                 svg {
                     opacity: 0.2;

@@ -15,6 +15,7 @@ const BottomRightContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 300px;
 
     .header {
         display: flex;
