@@ -26,7 +26,7 @@ const BottomRightContainer = styled.div`
         flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
 
         .division {
             display: flex;
