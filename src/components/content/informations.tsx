@@ -60,6 +60,7 @@ const InformationsWrapper = styled.div`
     padding: 20px;
     display: flex;
     flex-direction: column;
+    height: 510px;
 
     @media ${devices.tablet} {
         flex-basis: 100%;
