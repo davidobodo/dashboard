@@ -147,7 +147,7 @@ export const GraphContainer = styled.div`
         flex: 1;
         display: flex;
         flex-direction: column;
-        height: 270px;
+        min-height: 270px;
 
         .y-axis {
             height: 100%;
