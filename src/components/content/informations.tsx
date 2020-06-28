@@ -56,7 +56,7 @@ const InformationsWrapper = styled.div`
     flex: 1;
     margin: ${(props) => props.theme.popularBoxMargin};
     border-radius: ${(props) => props.theme.myBorderRadius};
-    background-color: #fff;
+    background-color: ${(props) => props.theme.primaryBackground};
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -128,7 +128,7 @@ const Informations = () => {
                 {DAYS.map((item) => {
                     const { day, date, active } = item;
                     return (
-                        <Day key={day} active={active} day={day} date={date} />
+                        <Day key={date} active={active} day={day} date={date} />
                     );
                 })}
             </div>

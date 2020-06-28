@@ -32,7 +32,7 @@ export const DoughnutContainer = styled.div`
         .inner-circle {
             width: 150px;
             height: 150px;
-            background-color: #fff;
+            background-color: ${(props) => props.theme.primaryBackground};
             position: absolute;
             left: 25px;
             top: 25px;

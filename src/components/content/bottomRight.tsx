@@ -10,7 +10,7 @@ const BottomRightContainer = styled.div`
     flex: 1;
     flex-basis: 30%;
     border-radius: ${(props) => props.theme.myBorderRadius};
-    background-color: #fff;
+    background-color: ${(props) => props.theme.primaryBackground};
     padding: 20px;
     display: flex;
     flex-direction: column;

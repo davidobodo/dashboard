@@ -9,7 +9,7 @@ const BoxTotalWrapper = styled.div`
     display: flex;
     padding: 20px;
     margin: ${(props) => props.theme.popularBoxMargin};
-    background-color: #fff;
+    background-color: ${(props) => props.theme.primaryBackground};
     flex: 1;
     border-radius: 20px;
 

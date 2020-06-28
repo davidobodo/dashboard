@@ -30,7 +30,7 @@ export const ContentHeader = styled.div`
 
     button {
         padding: 15px 30px;
-        color: #fff;
+        color: ${(props) => props.theme.primaryBackground};
         font-weight: 500;
         border-radius: 10px;
         border: none;
@@ -94,7 +94,7 @@ export const ContentBody = styled.div`
 
 export const GraphContainer = styled.div`
     margin: ${(props) => props.theme.popularBoxMargin};
-    background-color: #fff;
+    background-color: ${(props) => props.theme.primaryBackground};
     border-radius: ${(props) => props.theme.myBorderRadius};
     padding: 20px;
     display: flex;
@@ -135,7 +135,8 @@ export const GraphContainer = styled.div`
                 color: rgba(0, 0, 0, 0.5);
 
                 &:nth-child(1) {
-                    background-color: #fff;
+                    background-color: ${(props) =>
+                        props.theme.primaryBackground};
                     border-radius: 8px;
                     color: ${(props) => props.theme.darkBlue};
                 }

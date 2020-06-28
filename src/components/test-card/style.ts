@@ -30,8 +30,8 @@ export const TestCardContainer = styled.div`
     &:after {
         content: '';
         position: absolute;
-        border-right: 1px solid #fff;
-        border-bottom: 1px solid #fff;
+        border-right: 1px solid ${(props) => props.theme.primaryBackground};
+        border-bottom: 1px solid ${(props) => props.theme.primaryBackground};
         width: 6px;
         height: 6px;
         display: inline-block;
@@ -72,8 +72,8 @@ export const TestCardContainer = styled.div`
             display: inline-block;
             border-radius: 50%;
             margin: -6px;
-            border: 1px solid #fff;
-            color: #fff;
+            border: 1px solid ${(props) => props.theme.primaryBackground};
+            color: ${(props) => props.theme.primaryBackground};
             display: inline-flex;
             justify-content: center;
             align-items: center;

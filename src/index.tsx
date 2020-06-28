@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -26,11 +26,16 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const Root = () => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
     const handleToggleMode = () => {
-        console.log('herre');
+        setIsDarkMode(!isDarkMode);
     };
 
+    console.log(isDarkMode);
+
     const theme = {
+        primaryBackground: !isDarkMode ? '#fff' : '#000',
         lightBlue: '#f0f7fd',
         darkBlue: '#0075ff',
         veryDarkBlue: '#131f3e',
@@ -40,12 +45,12 @@ const Root = () => {
     };
 
     return (
-        <React.StrictMode>
+        <StrictMode>
             <ThemeProvider theme={theme}>
                 <GlobalStyles />
                 <App handleToggleMode={handleToggleMode} />
             </ThemeProvider>
-        </React.StrictMode>
+        </StrictMode>
     );
 };
 

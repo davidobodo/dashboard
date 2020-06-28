@@ -10,7 +10,7 @@ const AppWrapper = styled.div`
     min-height: 900px;
     margin: 20px;
     padding: 20px;
-    background-color: #fff;
+    background-color: ${(props) => props.theme.primaryBackground};
     border-radius: 50px;
     position: relative;
 `;

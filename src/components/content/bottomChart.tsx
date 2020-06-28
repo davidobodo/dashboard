@@ -12,7 +12,7 @@ const BottomChartContainer = styled.div`
     margin: ${(props) => props.theme.popularBoxMargin};
     flex: 1;
     border-radius: ${(props) => props.theme.myBorderRadius};
-    background-color: #fff;
+    background-color: ${(props) => props.theme.primaryBackground};
     padding: 20px;
 
     .header {

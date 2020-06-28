@@ -38,7 +38,7 @@ export const SidebarWrapper = styled.div`
             background: linear-gradient(
                 to right,
                 ${(props) => props.theme.lightBlue},
-                #fff
+                ${(props) => props.theme.primaryBackground};
             );
             border-color: ${(props) => props.theme.darkBlue};
 
@@ -93,7 +93,7 @@ export const SidebarWrapper = styled.div`
 
         button {
             background-color: ${(props) => props.theme.darkBlue};
-            color: #fff;
+            color: ${(props) => props.theme.primaryBackground};
             padding: 10px 25px;
             border: none;
             border-radius: 10px;
