@@ -32,8 +32,6 @@ const Root = () => {
         setIsDarkMode(!isDarkMode);
     };
 
-    console.log(isDarkMode);
-
     const theme = {
         primaryBackground: !isDarkMode ? '#fff' : '#000',
         smallTextColor: !isDarkMode ? 'rgba(0,0,0,0.4)' : '#fff',
@@ -43,6 +41,7 @@ const Root = () => {
         popularBoxMargin: '12px',
         ashColor: '#e9eff4',
         myBorderRadius: '20px',
+        isDarkMode: isDarkMode,
     };
 
     return (

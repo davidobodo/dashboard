@@ -37,6 +37,8 @@ const HeadingContainer = styled.div<HeadingProps>`
     ${({ semibold }) => semibold && 'font-weight: 500 !important;'}
     ${({ bold }) => bold && 'font-weight: 600 !important;'}
     ${({ veryBold }) => veryBold && 'font-weight: 800 !important;'}
+
+    ${({ theme }) => theme.isDarkMode && 'color: #fff !important'}
 `;
 
 const Heading5: React.FC<HeadingProps> = ({
