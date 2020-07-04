@@ -49,7 +49,7 @@ export const SidebarWrapper = styled.div`
 
         svg {
             margin-right: 10px;
-            color: rgba(0, 0, 0, 0.4);
+            color: ${(props) => props.theme.smallTextColor};
         }
     }
 

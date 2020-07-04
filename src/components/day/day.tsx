@@ -42,6 +42,8 @@ const DayContainer = styled.div<Partial<DayProps>>`
 `;
 
 const Day: React.FC<DayProps> = ({ day, date, active }) => {
+    //const { day, date, active } = props;
+
     return (
         <DayContainer active={active}>
             <div className="day-wrapper">

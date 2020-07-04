@@ -36,7 +36,8 @@ const Root = () => {
 
     const theme = {
         primaryBackground: !isDarkMode ? '#fff' : '#000',
-        lightBlue: '#f0f7fd',
+        smallTextColor: !isDarkMode ? 'rgba(0,0,0,0.4)' : '#fff',
+        lightBlue: !isDarkMode ? '#f0f7fd' : 'rgba(255,255,255,0.05)',
         darkBlue: '#0075ff',
         veryDarkBlue: '#131f3e',
         popularBoxMargin: '12px',

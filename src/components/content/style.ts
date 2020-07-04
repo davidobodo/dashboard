@@ -5,6 +5,7 @@ export const ContentWrapper = styled.div`
     background-color: ${(props) => props.theme.lightBlue};
     flex: 1;
     padding: 30px;
+    border-bottom-right-radius: 30px;
 
     @media ${devices.tablet} {
         padding: 15px;

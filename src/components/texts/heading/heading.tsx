@@ -28,7 +28,8 @@ const HeadingContainer = styled.div<HeadingProps>`
         ${({ type }) => type === 'h6' && 'font-size: 8px;'}
     }
 
-    ${({ lightColor }) => lightColor && 'color: rgba(0,0,0,0.4) !important;'}
+    ${({ lightColor, theme }) =>
+        lightColor && `color: ${theme.smallTextColor} !important;`}
     ${({ darkColor }) => darkColor && 'color: #131f3e;'}
     ${({ darkBlueColor }) => darkBlueColor && 'color: #0075ff;'}
 
